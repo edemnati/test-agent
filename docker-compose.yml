@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # Pour Ollama local, pointe vers le host de la machine
+      LLM_BASE_URL: ${LLM_BASE_URL:-http://host.docker.internal:11434}
+    extra_hosts:
+      # Résolution de host.docker.internal sur Linux
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped

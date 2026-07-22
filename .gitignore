@@ -1,0 +1,25 @@
+# Fichiers à ignorer
+
+# Configuration locale
+.env
+.venv/
+.vscode/
+
+# Cache et artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Fichiers de test locaux
+_test_id.txt
+rapport_*.md
